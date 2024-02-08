@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPOSAL</title>
+    <style>
+        img {
+            width: 250px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column; 
+            margin-top: 20%;
+        }
+        .yes {
+            padding: 10px ;
+            color: #ffffff;
+            padding: 0.7em 1.7em;
+            font-size: 18px;
+            border-radius: 0.5em;
+            background: #4bbd5c;
+            cursor: pointer;
+            border: 1px solid #ffffff;
+            transition: all 0.3s;
+            box-shadow: 6px 6px 12px #3f834f, -6px -6px 12px #5aa366;
+            
+            
+           
+        }
+        .yes.hover {
+            border: 1px solid rgb(255, 255, 255);
+            }
+
+        .yes:active {
+            box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+            }
+
+        .no {
+            padding: 10px;
+            color: #ffffff;
+            padding: 0.7em 1.7em;
+            font-size: 18px;
+            border-radius: 0.5em;
+            background: #ce3c3c;
+            cursor: pointer;
+            border: 1px solid #ffffff;
+            transition: all 0.3s;
+            box-shadow: 6px 6px 12px #a75858, -6px -6px 12px #ad7272;
+            margin-left: 40px;
+          
+        }
+        .no.hover {
+            border: 1px solid white;
+            }
+
+        .no:active {
+            box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+            }
+       .c{
+        display: flex;
+        flex-direction: row; 
+       justify-content: space-around;
+        text-align: center;
+       
+        width: 300px;
+        margin-top: 50px;
+       }
+       .c1 {
+        display: flex;
+        align-items: center;
+            justify-content: center;
+       }
+       .c2 {
+        display: flex;
+        align-items: center;
+            justify-content: center;
+            
+       }
+  
+       button{
+        border-radius: 5px;
+       }
+       
+       video {
+        width: 100px;
+       }
+        body {
+            
+            padding: 0;
+            background-image: url('project1Photots/background.jpeg');
+            background-size: cover; /* Cover the entire height and width of the body */
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+        .button {
+  font-size: 18px;
+  background-color: #008542;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+.button:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #008535 !important;
+  box-shadow: 0 -4px rgb(21 108 0 / 50%) inset,
+    0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset,
+    4px 0 rgb(21 108 0 / 50%) inset;
+}
+
+.button:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+.button:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.button:hover:after {
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+.button:active {
+  transform: translateY(4px);
+}
+
+.button:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+.lodingDiv {
+    display: none;
+   position: absolute;
+   top: 40%;
+   left: 25%;
+}
+.loding {
+    width: 200px;
+}
+.container2 {
+    display: none;
+    
+            align-items: center;
+            flex-direction: column; 
+          
+}
+
+
+
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a"> 
+            <img src="project1Photots/video.gif" alt="">
+          </div>
+
+        <div class="b">  <img src="project1Photots/willyou.png" alt=""></div>
+
+        <div class="c">
+            <div class="c1"> 
+                <button onclick="
+                check = 'yes'
+                setInterval( function1 , 2000)
+                document.querySelector('.container').style.display = 'none';
+                  document.querySelector('.lodingDiv').style.display = 'block';
+                   " class="yes">YES</button> 
+              </div>
+               <div class="c2">
+                   <BUtton onclick="
+                       
+                   console.log(check)
+                   function1()
+                   
+                       " class="no">NO</BUtton>
+               </div>
+               
+            </div> 
+           
+        
+        </div>
+         
+        <div class="lodingDiv">
+            <img class="loding" src="project1Photots/loding2.gif" alt="">
+
+        </div>
+        <div class="container2">
+            <img class="imgLL" src="project1Photots/LETTER.png" alt="">
+        </div>
+      
+
+    <body>
+        <script>
+            let check = undefined
+            
+        function function1() {
+            document.querySelector('.container').style.display = 'flex';
+            document.querySelector('.lodingDiv').style.display = 'none';
+           if (check==='yes') {
+            document.querySelector('.container').innerHTML = 
+            `<div class="a"> 
+            <img src="project1Photots/hugggg.gif" alt="">
+            </div>
+
+             <div class="a"> 
+                 <img src="project1Photots/ily2.png" alt="">
+                
+             </div>
+             <div class="a"> 
+                <button type="button" onclick="function5()" class="button">LETTER</button>
+
+                
+              </div>`
+           }
+           else if (check===undefined) {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '12px'
+            document.querySelector('.no').style.fontSize = '10px'
+            variable.style.fontSize = '15px'
+            document.querySelector('.no').innerHTML = 'REALLY?'
+            check = 'no1'
+           }
+           else if (check==='no1') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '14px'
+            variable.style.fontSize = '20px'
+            document.querySelector('.no').innerHTML = 'PLEASE'
+            check = 'no2'
+           }
+           else if (check==='no2') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '16px'
+            variable.style.fontSize = '24px'
+            document.querySelector('.no').innerHTML = 'COME ON'
+            check = 'no3'
+           }
+           else if (check==='no3') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '16px'
+            variable.style.fontSize = '28px'
+            document.querySelector('.no').innerHTML = 'NO WAY'
+            check = 'no4'
+           }
+           else if (check==='no4') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '18px'
+            variable.style.fontSize = '32px'
+            document.querySelector('.no').innerHTML = 'SERIOUSLY?'
+            check = 'no5'
+           }
+           else if (check==='no5') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '20px'
+            variable.style.fontSize = '36px'
+            document.querySelector('.no').innerHTML = `I'LL BE SAD`
+            check = 'no6'
+           }
+           else if (check==='no6') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '23px'
+            variable.style.fontSize = '38px'
+            document.querySelector('.no').innerHTML = `U BREAKIN MY 
+            HEART`
+            check = 'no7'
+           }
+           else if (check==='no7') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '26px'
+            variable.style.fontSize = '40px'
+            document.querySelector('.no').innerHTML = `I'LL CRY EVERYDAY`
+            check = 'no8'
+           }
+           else if (check==='no8') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '30px'
+            
+            document.querySelector('.no').innerHTML = `AND YOU KNOW WHATT?`
+            check = 'no9'
+           }
+           else if (check==='no9') {
+            let variable = document.querySelector('.yes')
+            variable.style.padding = '30px'
+            
+            document.querySelector('.no').innerHTML = `YOU CANT DO THIS TO ME`
+            check = 'no10'
+           } else {document.querySelector('.c').innerHTML=` <div class="c1"> 
+                <button onclick="
+                check = 'yes'
+                   function1()
+                   " class="yes">YES</button> 
+              </div>`
+              document.querySelector('.yes').style.padding = '32px'
+              document.querySelector('.yes').style.fontSize = '40px'
+         
+        }
+        } 
+        function function5() {
+
+    document.querySelector('.container2').style.display = 'flex';
+}
+
+
+    
+    </script>
+</body>
+</html>
